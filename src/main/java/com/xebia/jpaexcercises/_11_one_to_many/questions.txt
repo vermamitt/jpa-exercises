@@ -7,3 +7,4 @@
 3. What table structure got created?
 4. Who is the owning side and who is the inverse side?
 5. How many SQL queries will be fired if you find department?
+6. What will happen if you remove `mappedBy` attribute Department.java?
