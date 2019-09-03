@@ -1,4 +1,4 @@
-# JPA Excercises
+# JPA Exercises
 
 This repository contains exercises to help people learn JPA.
 
