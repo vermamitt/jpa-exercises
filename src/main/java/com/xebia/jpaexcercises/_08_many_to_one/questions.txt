@@ -4,7 +4,7 @@
 
 1. How many tables are created in mysql? You can view table using `show tables` command.
 2. What is the structure of employees table? You can view table structure using `describe employees` command.
-3. What is the structure of department table? You can view table structure using `describe employees` command.
+3. What is the structure of departments table? You can view table structure using `describe departments` command.
 4. What is the sequence of insert statements? Did Hibernate first inserted to employees and then to departments? Explain why?
 5. Did hibernate created mapping table?
 6. What will happen if we remove `CascadeType.PERSIST` attribute in `department` field of `Employee` class? Why it happens?
