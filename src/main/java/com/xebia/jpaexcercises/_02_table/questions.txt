@@ -1,3 +1,4 @@
 # Questions
 
 1. Run the entity class with `DbApp.java` and verify the table name.
+2. Create index on full_name field
