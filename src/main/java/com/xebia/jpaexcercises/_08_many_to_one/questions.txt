@@ -12,4 +12,3 @@
 8. What code you will write to create two employees John and Tom associated with IT department?
 9. Which of the two entities is the owning side and which of the two is the inverse side?
 10. How can you change name of the join column from `department_id` to `dept_id`?
-

@@ -12,6 +12,7 @@ public class Employee {
     private String name;
     private long salary;
     @OneToOne
+    @JoinColumn(name = "plot_id")
     private ParkingSpace parkingSpace;
 
     public Employee() {
@@ -41,6 +42,18 @@ public class Employee {
 
     public void setParkingSpace(ParkingSpace parkingSpace) {
         this.parkingSpace = parkingSpace;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSalary(long salary) {
+        this.salary = salary;
     }
 
     @Override

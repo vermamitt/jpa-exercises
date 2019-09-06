@@ -21,7 +21,7 @@ public class Employee {
     @Column(name = "pic")
     private byte[] picture;
 
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     private EmployeeType employeeType;
 
     public Long getId() {

@@ -16,11 +16,17 @@ public class ManyToOneApp {
             entityManager.getTransaction().begin();
 
             Employee employee = new Employee();
-            employee.setName("Test Employee");
+            employee.setName("Tom");
             employee.setSalary(100_000);
             Department department = new Department("IT");
             employee.setDepartment(department);
+
+            Employee employee1 = new Employee();
+            employee1.setName("Amit");
+            employee1.setSalary(100_00);
+            employee1.setDepartment(department);
             entityManager.persist(employee);
+            entityManager.persist(employee1);
             entityManager.getTransaction().commit();
 
             Employee foundEmployee = entityManager.find(Employee.class, employee.getId());

@@ -1,7 +1,6 @@
 package com.xebia.jpaexcercises._10_one_to_one;
 
 
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -17,7 +16,18 @@ public class OneToOneApp {
             entityManager.getTransaction().begin();
 
             ParkingSpace parkingSpace = new ParkingSpace(123);
-            Employee employee = new Employee("Test Employee", 1_000_000, parkingSpace);
+            entityManager.persist(parkingSpace);
+            entityManager.getTransaction().commit();
+            entityManager.close();
+
+            entityManager = entityManagerFactory.createEntityManager();
+            entityManager.getTransaction().begin();
+            Employee employee = new Employee();
+            employee.setName("Amit");
+            employee.setSalary(1_000_000);
+            parkingSpace.setEmployee(employee);
+
+            //Employee employee = new Employee("Test Employee", 1_000_000, parkingSpace);
             entityManager.persist(employee);
             entityManager.getTransaction().commit();
             entityManager.close();

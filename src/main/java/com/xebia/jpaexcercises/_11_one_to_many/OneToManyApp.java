@@ -22,6 +22,7 @@ public class OneToManyApp {
             employee.setName("Test Employee");
             employee.setSalary(100_000);
             department.addEmployee(employee);
+            employee.setDepartment(department);
             entityManager.persist(employee);
             entityManager.getTransaction().commit();
 

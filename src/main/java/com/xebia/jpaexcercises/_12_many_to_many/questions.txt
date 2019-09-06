@@ -14,3 +14,10 @@ use jpaex;
 3. Why we don't need @JoinColumn in @ManyToMany mapping?
 4. How can you ensure that join table is created with name `emp_proj` and has columns `emp_id` and `proj_id`?
 5. Create two employees and add them to a single project? Make sure data is saved to database.
+
+
+******************
+1. 5 Tables will be created.
+2. Use @ManyToMany(mappedBy = "projects") in projects to reduce one extra generated table.
+3. There is no need in mamytomay because refrenced is generated.
+4.

@@ -7,12 +7,13 @@ import javax.persistence.*;
 public class Employee {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private long salary;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "dept_id")
     private Department department;
 
     public Employee() {

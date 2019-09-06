@@ -8,3 +8,14 @@
 4. How can you create bidirectional mapping between `Employee` and `ParkingSpace`?
 5. Create an employee and assign them a parking lot. Make sure if you fetch parking employee is also fetched.
 Now, how can you delete the parking lot?
+
+***********************************************
+1.Add CascadeType to @OneToOne in Employee
+2. 3 tables
+    employees having foreign key, parking_lot, hibernate_sequence
+3. @JoinColumn(name = "plot_id")
+   private ParkingSpace parkingSpace;
+4.
+    @OneToOne(mappedBy = "parkingSpace")
+    private Employee employee
+5. To fetch employee along with parking space just implement getter and setter and use setter to get employee.

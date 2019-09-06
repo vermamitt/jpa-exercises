@@ -11,6 +11,9 @@ public class ParkingSpace {
     private Long id;
     private int lotNo;
 
+    @OneToOne(mappedBy = "parkingSpace")
+    Employee employee;
+
     public ParkingSpace() {
     }
 
@@ -32,6 +35,14 @@ public class ParkingSpace {
 
     public void setLotNo(int lotNo) {
         this.lotNo = lotNo;
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
     @Override

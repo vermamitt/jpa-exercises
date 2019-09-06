@@ -12,7 +12,7 @@ public class Project {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    @ManyToMany
+    @ManyToMany(mappedBy = "projects")
     private List<Employee> employees;
 
     public Project() {
